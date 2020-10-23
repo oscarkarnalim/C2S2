@@ -5,7 +5,16 @@ Further details can be seen in the corresponding paper (updated later). Currentl
 
 ## C2S2 Modes 
 ### select
+Given a set of programs, this mode will list the common segments. 
+*Quick command*: 
+```
+select <input_dirpath> <programming_language> <output_filepath> 
+```  
 
+*Complete command*: 
+```
+select <input_dirpath> <programming_language> <output_filepath> <additional_keywords_path> <inclusion_threshold> <min_ngram_length> <max_ngram_length> <boolean_setting_1> <boolean_setting_2> ... <boolean_setting_n>
+```  
 
 ## Acknowledgments
 This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs.
