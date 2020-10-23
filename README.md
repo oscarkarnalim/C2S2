@@ -6,6 +6,7 @@ Further details can be seen in the corresponding paper (updated later). Currentl
 ## C2S2 Modes 
 ### select
 Given a set of programs, this mode will list the common segments. 
+
 *Quick command*: 
 ```
 select <input_dirpath> <programming_language> <output_filepath> 
