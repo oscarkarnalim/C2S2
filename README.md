@@ -35,7 +35,7 @@ A string that should be either 'code', 'codegeneralised', or 'complete'. The fir
 ### <input_dirpath>
 A string representing the input directory containing student submissions (each submission is represented by either one file or one sub-directory). Please use quotes if the path contains spaces.
 ### <inclusion_threshold>
-A floating number representing the minimum percentage threshold for common segment inclusion. Any segments which submission occurrence proportion is higher than or equal to the threshold are included. This is assigned with 0.75 by default; all segments that occur in more than or equal to three fourths of the submissions are included.
+A floating number representing the minimum percentage threshold for common segment inclusion. Any segments which submission occurrence proportion is higher than or equal to the threshold are included. This is assigned with 0.75 by default; all segments that occur in more than or equal to three fourths of the submissions are included.  
 value: a floating number between 0 to 1 (inclusive).
 
 ## Acknowledgments
