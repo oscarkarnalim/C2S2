@@ -5,7 +5,7 @@ Further details can be seen in the corresponding paper (updated later). Currentl
 
 ## C2S2 Modes 
 ### select
-Given a set of programs, this mode will list the common segments. 
+Given a set of programs, this mode will list the common code segments. 
 
 *Quick command*: 
 ```
@@ -15,6 +15,14 @@ select <input_dirpath> <programming_language> <output_filepath>
 *Complete command*: 
 ```
 select <input_dirpath> <programming_language> <output_filepath> <additional_keywords_path> <inclusion_threshold> <min_ngram_length> <max_ngram_length> <boolean_setting_1> <boolean_setting_2> ... <boolean_setting_n>
+```  
+
+### remove
+Given a set of programs and a list of common code segments, this mode will exclude the segments from the set of programs. 
+
+*Command*: 
+```
+remove <input_dirpath> <programming_language> <common_code_filepath> <additional_keywords_path> <common_code_type>
 ```  
 
 ## Acknowledgments
