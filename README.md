@@ -1,11 +1,11 @@
 # Common Code Segment Selector
 
-**Common** **code** **segment** **selector** \(C2S2\) is a independent tool to select common code segments for exclusion from code similarity detection. It accepts a set of programs and lists the common segments. The segments are subject to manual investigation before being excluded from similarity detection. If the similarity detection does not accommodate such exclusion, but can deal with uncompilable code, C2S2 can remove the common segments from that set of programs.
+**Common** **code** **segment** **selector** \(C2S2\) is a independent tool to select common code segments for exclusion from code similarity detection. It accepts a set of student submissions and lists the common segments. The segments are subject to manual investigation before being excluded from similarity detection. If the similarity detection does not accommodate such exclusion, but can deal with uncompilable code, C2S2 can remove the common segments from that set of programs.
 Further details can be seen in the corresponding paper (updated later). Currently, the tool covers two programming languages: Java and Python. 
 
 ## C2S2 Modes 
 ### select
-Given a set of programs, this mode will list the common code segments. 
+This mode lists any common segments from given student submissions and stores the result in an output file.  
 
 *Quick command*: 
 ```
@@ -14,11 +14,13 @@ select <input_dirpath> <programming_language> <output_filepath>
 
 *Complete command*: 
 ```
-select <input_dirpath> <programming_language> <output_filepath> <additional_keywords_path> <inclusion_threshold> <min_ngram_length> <max_ngram_length> <boolean_setting_1> <boolean_setting_2> ... <boolean_setting_n>
+select <input_dirpath> <programming_language> <output_filepath> <additional_keywords_path> <inclusion_threshold> <min_ngram_length> <max_ngram_length> coderesult generalised startident lineexclusive subremove
 ```  
+ Any of the last five arguments can be removed to adjust the selection's behaviour. Further details about those can be seen below.
+
 
 ### remove
-Given a set of programs and a list of common code segments, this mode will exclude the segments from the set of programs. 
+This mode removes common code segments from given student submissions. This accepts a directory containing the code files and generates the results under a new directory named '[result]' + given input directory.
 
 *Command*: 
 ```
@@ -36,7 +38,19 @@ A string that should be either 'code', 'codegeneralised', or 'complete'. The fir
 A string representing the input directory containing student submissions (each submission is represented by either one file or one sub-directory). Please use quotes if the path contains spaces.
 ### <inclusion_threshold>
 A floating number representing the minimum percentage threshold for common segment inclusion. Any segments which submission occurrence proportion is higher than or equal to the threshold are included. This is assigned with 0.75 by default; all segments that occur in more than or equal to three fourths of the submissions are included.  
-value: a floating number between 0 to 1 (inclusive).
+Value: a floating number between 0 to 1 (inclusive).
+### <max_ngram_length>
+A number depicting the largest n-gram length of the filtered common segments. This is assigned 50 by default.  
+Value: a positive integer higher than <min_ngram_length>.
+### <min_ngram_length>
+A number depicting the smallest n-gram length of the filtered common segments. This is assigned 10 by default.  
+Value: a positive integer.
+### <output_filepath>
+A string representing the filepath of the output, containing the common segments. Please use quotes if the path contains spaces.
+### <programming_language>
+A constant depicting the programming language used on given student submissions.  
+Value: 'java' (for Java) or 'py' (for Python).
+
 
 ## Acknowledgments
 This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs.
