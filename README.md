@@ -32,6 +32,11 @@ A string representing a file containing additional keywords with newline as the 
 A string representing a file containing common code segments. The file can be either the mode 1's output or an arbitrary code written in compliance to the programming language's syntax.
 ### <common_code_type>
 A string that should be either 'code', 'codegeneralised', or 'complete'. The first one means the common code file is a regular code file. The second one is similar to the first except that the code tokens will be generalised prior compared for exclusion. The third one means the common code file is the mode 1's output without 'coderesult' parameter.
+### <input_dirpath>
+A string representing the input directory containing student submissions (each submission is represented by either one file or one sub-directory). Please use quotes if the path contains spaces.
+### <inclusion_threshold>
+A floating number representing the minimum percentage threshold for common segment inclusion. Any segments which submission occurrence proportion is higher than or equal to the threshold are included. This is assigned with 0.75 by default; all segments that occur in more than or equal to three fourths of the submissions are included.
+value: a floating number between 0 to 1 (inclusive).
 
 ## Acknowledgments
 This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs.
