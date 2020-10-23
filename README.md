@@ -50,7 +50,16 @@ A string representing the filepath of the output, containing the common segments
 ### <programming_language>
 A constant depicting the programming language used on given student submissions.  
 Value: 'java' (for Java) or 'py' (for Python).
-
+### 'coderesult'
+This ensures the suggested segments are displayed as raw code instead of generalised while having no information about the variation. The segments can be passed directly to a code similarity detection tool for exclusion. It is set true by default.
+### 'generalised'
+This enables token generalisation while selection common segments. It is set true by default. See the paper for details.
+### 'lineexclusive'
+This ensures the common segment selection only considers segments that start at the beginning of a line and end at the end of a line. It is set as true by default. See the paper for details.
+### 'startident'
+This ensures the common segment selection only considers segments that start with identifier or keyword. It is set true by default. See the paper for details.
+### 'subremove'
+This removes any common segments that are a part of longer fragments from the result. It is set true by default. See the paper for details.
 
 ## Acknowledgments
 This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs.
