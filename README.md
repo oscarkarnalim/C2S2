@@ -62,4 +62,4 @@ This ensures the common segment selection only considers segments that start wit
 This removes any common segments that are a part of longer fragments from the result. It is set true by default. See the paper for details.
 
 ## Acknowledgments
-This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs.
+This tool uses [ANTLR](https://www.antlr.org/) to tokenise given programs. It also adapts [arunjeyapal's implementation of RKR-GST](https://github.com/arunjeyapal/GreedyStringTiling) to remove common code segments.
