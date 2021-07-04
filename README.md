@@ -1,7 +1,7 @@
 # Common Code Segment Selector
 
 **Common** **code** **segment** **selector** \(C2S2\) is a independent tool to select common code segments for exclusion from code similarity detection. It accepts a set of student submissions and lists the common segments. The segments are subject to manual investigation before being excluded from similarity detection. If the similarity detection does not accommodate such exclusion, but can deal with uncompilable code, C2S2 can remove the common segments from that set of programs.
-Further details can be seen in [the corresponding paper](https://dl.acm.org/doi/10.1145/3408877.3432436) published at 52nd ACM Technical Symposium on Computer Science Education (SIGCSE 2021). Currently, the tool covers two programming languages: Java and Python. 
+Further details can be seen in [the corresponding paper](https://dl.acm.org/doi/10.1145/3408877.3432436) published at 52nd ACM Technical Symposium on Computer Science Education (SIGCSE 2021) or [the recorded presentation](https://www.youtube.com/watch?v=K2c7yBNU8jE). Currently, the tool covers two programming languages: Java and Python. 
 
 ## C2S2 Modes 
 ### select
